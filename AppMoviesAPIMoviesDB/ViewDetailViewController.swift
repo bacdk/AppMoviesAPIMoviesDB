@@ -16,8 +16,11 @@ class ViewDetailViewController: UIViewController {
     @IBOutlet weak var voteMovie: UILabel!
     @IBOutlet weak var budgetMovie: UILabel!
     @IBOutlet weak var revenueMovie: UILabel!
-    @IBOutlet weak var overViewMovie: UILabel!
-    @IBOutlet weak var scrollViewMovie: UIScrollView!
+    @IBOutlet weak var overviewMovie: UITextView!
+    
+    //@IBOutlet weak var overviewMovie: UILabel!
+    //@IBOutlet weak var overViewMovie: UILabel!
+    //@IBOutlet weak var scrollViewMovie: UIScrollView!
     //
     var id: Int?
     var image: UIImage?
@@ -68,7 +71,7 @@ class ViewDetailViewController: UIViewController {
                                 self.revenueMovie.text = "Revenue: \(revenue)$"
                             }
                             if let overview = detail["overview"] {
-                                self.overViewMovie.text = "Overview: \(overview)"
+                                self.overviewMovie.text = "\(overview)"
                             }
                         }
                     } catch let error as NSError {
